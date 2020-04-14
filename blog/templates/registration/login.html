@@ -1,0 +1,28 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <!-- {% if form.errors %}
+        <p>Your username and password didn't match. Please try again.</p>
+    {% endif %} -->
+
+    <div class="content-section">
+        <form method="POST" action="{% url 'login' %}">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4" style="font-family: Lobster; text-align: center; font-size: 30px; color:  rgb(255, 189, 67); transform: translateX(0%) translateY(10%);">Log In</legend>
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-info" type="submit">Login</button>
+                <input type="hidden" name="next" value="{{ next }}" />
+            </div>
+        </form>
+    </div>
+<style>
+    .content-section {
+        transform: translateX(50%) translateY(50%);
+        opacity: 0.9;
+    }
+</style>
+    
+ {% endblock %}

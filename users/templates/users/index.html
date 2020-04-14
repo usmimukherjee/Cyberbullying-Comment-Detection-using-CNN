@@ -1,0 +1,80 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<!-- </div class="container h-100"> -->
+<div class="content-section2" style="width: 18rem;">
+  <div class="container-fluid">
+    <div class="card-body">
+        <h1 style="color: rgb(255, 189, 67); text-align: center; justify-content: center; margin: auto; align-items: center;">Bloggergram</h1><br>
+        <p style="text-align: center; padding: 10px;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+           incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+           laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+           esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa 
+           qui officia deserunt mollit anim id est laborum.</p>
+
+        <p class=land-btn><a href="{% url 'login' %}" class="top-menu"  style="font-family: 'Times New Roman';"><button type="button" class="btn btn-info" style="font-size: 8px;padding: 1px 25px;"><h4>login</h4></button> </a>
+        <a href="{% url 'register' %}" class="top-menu"  style="font-family: 'Times New Roman';"><button type="button" class="btn btn-info" style="font-size: 8px;padding: 1px 25px;"><h4>register</h4></button> </a></p>
+    </div>
+  </div>
+<!-- </div> -->
+  <style>
+    .btn  {
+      border-radius: 30px;
+    }
+    .content-section2:after {
+  content: " ";
+  display: block;
+  padding-bottom: 10%;
+  transform: translateX(10%) translateY(40%);
+}
+
+.land-btn {
+  margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin: auto;
+        position: relative;
+        align-items: center;
+        margin-right: 130px;
+  /* transform: translateX(70%) translateY(10%); */
+}
+
+      .content-section2, .container h-100 {
+        min-width:80%;
+        /* border-radius: 10px; */
+        min-height:80%;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin: auto;
+        transform: translateX(70%) translateY(10%);
+
+        display: flex;
+       justify-content: center;
+        align-items: center;
+
+	      width:700px;
+	      height:480px;
+        position:absolute;
+        -moz-box-align: center;
+
+
+        background: #ffffff;
+        padding: 10px 20px;
+        border: 1px solid #dddddd;
+        /* border-radius: 200px; */
+        box-shadow:ghostwhite;
+        
+        /* box-shadow:black; */
+        /* margin-bottom: 20px; */
+        opacity: 0.85;
+        /* height: 400px; */
+        /* min-width: 500px;   */
+        /* border-radius: 10px;   */
+      }
+      .a{
+          align-content: center;
+      }
+  </style>
+  
+  
+{% endblock %}
